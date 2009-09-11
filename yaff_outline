@@ -1,0 +1,44 @@
+Protokoll:
+	Connections:
+		
+		
+	File Transfer:
+		
+
+Nodes:
+	RSA Pub/Priv Key
+	
+	
+	
+	
+	Nickname in Use Error 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Programm Start:
+	connect to friends according to last information
+	update friend information for unconnected friends
+	connect to friends with updated information
+	
+File Transfer:
+	for all friends get file list
+	{
+	name = String
+	checksum = jay random hash
+	chunkcount = Integer
+	}
+	get, file, chunk number X
+
+
+* hardcoded 4 kB Chunks
+* Encryption
+* Mapping Nick -> Socket
+
+later:
+* Compression

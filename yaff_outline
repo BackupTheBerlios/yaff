@@ -31,7 +31,7 @@ File Transfer:
 	{
 	name = String
 	checksum = jay random hash
-	chunkcount = Integer
+	chunkcount = long
 	}
 	get, file, chunk number X
 
@@ -42,3 +42,32 @@ File Transfer:
 
 later:
 * Compression
+
+
+
+
+filelist:
+{
+	name = String
+	checksum = jay random hash
+	chunkcount = long
+}
+
+
+
+wir fragen keinen welche chunks er hat
+bei 4kb chunksize und 50gb file --> overhead
+stattdessen:
+putfile filehash <0 <0 --> impliziter Errorcode: Chunk not available 
+
+
+
+if Header Byte == 0
+	data
+else
+	opcode
+
+if opcode
+	interpret opcode
+if data
+	data fu

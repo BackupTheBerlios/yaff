@@ -10,9 +10,10 @@ public class Friend {
 	private int port;
 	private String RSAKey;
 	
-	public Friend(InetAddress address, int port) {
+	public Friend(String name, InetAddress address, int port) {
 		this.address = address;
 		this.port = port;
+		this.name = name;
 	}
 	
 	public void sendFile() {

@@ -9,4 +9,6 @@ public class FileChunk {
 	public FileChunk(File f, long index){
 		//a bissi file io (chunk einlesen)
 	}
+	
+	
 }

@@ -13,9 +13,6 @@ public class CryptoTransport {
 			KeyPair keyPair = pairgen.generateKeyPair();
 			
 		}
-		catch (IOException e) {
-			System.out.println(e);
-		}
 		catch (GeneralSecurityException e) {
 			System.out.println(e);
 		}

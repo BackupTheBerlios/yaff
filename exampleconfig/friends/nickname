@@ -1,6 +1,7 @@
-Adress = x.x.x.x
+Address = x.x.x.x
+AlternativeAddress = user.dyndns.org
 Port = 1337
-timestamp = 2009-09-10-13-37-15
+timestamp = unix timestamp
 -----BEGIN RSA PUBLIC KEY-----
 
 -----END RSA PUBLIC KEY-----

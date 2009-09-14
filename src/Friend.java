@@ -2,12 +2,20 @@ import java.io.*;
 import java.net.*;
 
 public class Friend {
-	public InetAddress address;
-	public InetAddress alternativeAddress;
-	public int port;
+	private YaffNet net;
+	
+	private String name;
+	private InetAddress address;
+	private InetAddress alternativeAddress;
+	private int port;
+	private String RSAKey;
 	
 	public Friend(InetAddress address, int port) {
 		this.address = address;
 		this.port = port;
+	}
+	
+	public void sendFile() {
+		
 	}
 }

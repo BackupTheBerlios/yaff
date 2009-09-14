@@ -1,9 +1,12 @@
+import java.net.Socket;
+
 
 public class Connection {
 	private Socket socket;
+
 	
 	public Connection(Socket socket) {
-		Socket this.socket = socket;
+		this.socket = socket;
 	}
 	
 	

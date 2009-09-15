@@ -1,12 +1,14 @@
 import java.io.File;
 
 
-public class SharedRessource {
+public class SharedResource {
 	private File diskFile;
 	private long chunkCount;
 	private String hash;
 	private boolean complete;
 	
-	public void write(){}
+	public void write(){
+		
+	}
 
 }

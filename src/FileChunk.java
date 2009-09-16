@@ -6,6 +6,7 @@ public class FileChunk {
 	
 	private byte[] data; //chunk data
 	private long index; //index of this particular chunk in a file;
+	private boolean finalChunk = false;
 	
 	public FileChunk(File f, long index){		
 		this.index = index;
@@ -29,6 +30,7 @@ public class FileChunk {
 				return data;
 			} else {
 				data = new byte[(int) (rf.length() - index*CHUNK_SIZE)];
+				finalChunk = true;
 				return data;
 			}
 						
@@ -43,6 +45,9 @@ public class FileChunk {
 	}
 	public long getIndex(){
 		return index;
+	}
+	public boolean isFinal() {
+		return finalChunk;
 	}
 	
 }

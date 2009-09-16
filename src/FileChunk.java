@@ -2,7 +2,7 @@ import java.io.*;
 
 public class FileChunk {
 	
-	public final long CHUNK_SIZE = 256000;
+	public final long CHUNK_SIZE  = 256000;
 	
 	private byte[] data; //chunk data
 	private long index; //index of this particular chunk in a file;

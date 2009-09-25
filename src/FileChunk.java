@@ -1,12 +1,16 @@
 import java.io.*;
+import java.util.zip.*;
 
 public class FileChunk {
 	
-	public final long CHUNK_SIZE  = 256000;
+	public final long CHUNK_SIZE  = 8192000;
 	
 	private byte[] data; //chunk data
 	private long index; //index of this particular chunk in a file;
 	private boolean finalChunk = false;
+	private long adler32; //much faster than crc32 but not that reliable; still appropriate!
+	private long crc32;
+	
 	
 	public FileChunk(File f, long index){		
 		this.index = index;
@@ -38,6 +42,20 @@ public class FileChunk {
 			e.printStackTrace();
 			return null;
 		}		
+	}
+	
+	public long getAdler32() {
+		Adler32 adler = new Adler32();
+		adler.update(data);
+		this.adler32 = adler.getValue();
+		return adler32;
+	}
+	
+	public long getCRC32() {
+		CRC32 crc = new CRC32();
+		crc.update(data);
+		this.crc32 = crc.getValue();
+		return crc32;
 	}
 
 	public byte[] getData() {

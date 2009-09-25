@@ -17,17 +17,8 @@ public class SharedResource {
 	public void write(){
 		
 	}
-	/* md needs to be updated every time a new chunk is generated in order to avoid heap overflows!
-	 * 
-	private String getHash(File f) {
-		
-		MessageDigest md = MessageDigest.getInstance("SHA-1");
-		byte[] b = new byte[(int)f.length()];
-		md.update(b);
-		byte[] hash = md.digest();
-	}
-	*/
-	//TODO: needs to be checked!
+
+	//TODO: needs to be checked! probably junk due to heap overflow issues; chunks need to be generated one after another
 	private ArrayList <FileChunk> generateChunks() {
 		chunks = new ArrayList <FileChunk> ();
 		for(long i = 0;;i++) {

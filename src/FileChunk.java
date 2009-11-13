@@ -4,12 +4,14 @@ import java.util.zip.*;
 public class FileChunk {
 	
 	public final long CHUNK_SIZE  = 8192000;
+	// 8*1024*1024 = 8388608 ??? why this size ?
 	
 	private byte[] data; //chunk data
 	private long index; //index of this particular chunk in a file;
 	private boolean finalChunk = false;
 	private long adler32; //much faster than crc32 but not that reliable; still appropriate!
 	private long crc32;
+	// Consider using hashes, e.g. md5, SHA-1, Skein (variable bit-length)
 	
 	
 	public FileChunk(File f, long index){		
